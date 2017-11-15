@@ -3,8 +3,8 @@ var levelText = document.getElementById('levelText');
 var numLevel = 1;
 
 function updateLevel() {
-levelDisplay = "Level " + numLevel;
-levelText.innerText = levelDisplay;
+  levelDisplay = "Level " + numLevel;
+  levelText.innerText = levelDisplay;
 }
 
 var dollars = document.getElementById('yourDollars');
@@ -136,6 +136,7 @@ function levelUpConfetti() {
   var congratulationsContainer = document.getElementById('confetti-container');
 
   congratulationsContainer.style.display = "block";
+  confettiBadge();
     // globals
     var canvas;
     var contx;
@@ -357,6 +358,13 @@ function levelUpConfetti() {
 
 setTimeout (function endLevelUp() {
     DeactivateConfetti();
+    if (numLevel === 1){
+      badgeLevel1();
+    } else if (numLevel === 2) {
+      badgeLevel2();
+    } else if (numLevel === 3) {
+      badgeLevel3();
+    }
 }, 3000);
 
 setTimeout (function hideLevelUp() {
@@ -365,6 +373,7 @@ setTimeout (function hideLevelUp() {
   updateLevel();
   resetScore();
   updateBonus();
+
 }, 5000);
 
 };
@@ -380,3 +389,44 @@ when f happens trigger end level + reward
 resetScore();
 
 **/
+
+/** Load Reward Canvas**/
+var confettiBadge = function() {
+  var confettiPic=document.getElementById("confettiRewardCanv");
+  var confctx=confettiPic.getContext("2d");
+  var img=document.getElementById("reward");
+  confctx.drawImage(img,10,10);
+}
+
+var badgeLevel1 = function() {
+    var pic=document.getElementById("rewardCanv");
+    var picctx=pic.getContext("2d");
+    var img=document.getElementById("reward1");
+    picctx.drawImage(img,10,10);
+    picctx.font="60px Kaushan Script";
+    picctx.beginPath();
+    picctx.fillText("1", 100, 100);
+    picctx.stroke();
+  };
+
+var badgeLevel2 = function(){
+    var pic2=document.getElementById("rewardCanv2");
+    var pic2ctx=pic2.getContext("2d");
+    var img=document.getElementById("reward2");
+    pic2ctx.drawImage(img,10,10);
+    pic2ctx.font="60px Kaushan Script";
+    pic2ctx.beginPath();
+    pic2ctx.fillText("2", 100, 100);
+    pic2ctx.stroke();
+  };
+
+  var badgeLevel3 = function(){
+    var pic3=document.getElementById("rewardCanv3");
+    var pic3ctx=pic3.getContext("2d");
+    var img=document.getElementById("reward3");
+    pic3ctx.drawImage(img,10,10);
+    pic3ctx.font="60px Kaushan Script";
+    pic3ctx.beginPath();
+    pic3ctx.fillText("3", 100, 100);
+    pic3ctx.stroke();
+};
