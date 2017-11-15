@@ -1,6 +1,6 @@
 /** Progress Bar **/
 var levelText = document.getElementById('levelText');
-var numLevel = 1
+var numLevel = 1;
 
 function updateLevel() {
 levelDisplay = "Level " + numLevel;
@@ -13,13 +13,13 @@ var moneyDisplay;
 
 
 function updateMoney() {
-  numDollars = numDollars + 20;
+  numDollars = numDollars + (19 + numLevel);
   moneyDisplay = "$ " + numDollars;
   dollars.innerText = moneyDisplay;
 }
 
 function levelUpMoney() {
-  numDollars = numDollars + 100;
+  numDollars = numDollars + (100*numLevel);
   moneyDisplay = "$ " + numDollars;
   dollars.innerText = moneyDisplay;
 }
@@ -58,7 +58,7 @@ function oneFifth() {
   ctx.beginPath();
   ctx.strokeStyle="coral";
   ctx.arc(100,100,80,5,2*Math.PI);
-  ctx.fillText("$20", 76, 105);
+  ctx.fillText("$" + (19 + numLevel), 76, 105);
   ctx.stroke();
   updateMoney();
 };
@@ -68,7 +68,7 @@ function twoFifth() {
   ctx.beginPath();
   ctx.strokeStyle="coral";
   ctx.arc(100,100,80,4,2*Math.PI);
-  ctx.fillText("$40", 75, 105);
+  ctx.fillText("$" + 2*(19 + numLevel), 75, 105);
   ctx.stroke();
   updateMoney();
 };
@@ -78,7 +78,7 @@ function threeFifth() {
   ctx.beginPath();
   ctx.strokeStyle="coral";
   ctx.arc(100,100,80,2,2*Math.PI);
-  ctx.fillText("$60", 75, 105);
+  ctx.fillText("$" + 3*(19 + numLevel), 75, 105);
   ctx.stroke();
   updateMoney();
 };
@@ -88,7 +88,7 @@ function fourFifth() {
   ctx.beginPath();
   ctx.strokeStyle="coral";
   ctx.arc(100,100,80,1,2*Math.PI);
-  ctx.fillText("$80", 75, 105);
+  ctx.fillText("$" + 4*(19 + numLevel), 75, 105);
   ctx.stroke();
   updateMoney();
 };
@@ -100,7 +100,7 @@ function fiveFifth() {
   ctx.shadowBlur=20;
   ctx.shadowColor="white";
   ctx.arc(100,100,80,0,2*Math.PI);
-  ctx.fillText("$100", 73, 105);
+  ctx.fillText("$" + ((4*(19 + numLevel))+(100 * numLevel)), 73, 105);
   ctx.stroke();
   levelUpConfetti();
   levelUpMoney();
@@ -123,6 +123,14 @@ resetButton.addEventListener('click', resetScore);
 /** End Progress Bar **/
 
 /** Confetti **/
+
+var bonusCash = document.getElementById('bonusCash');
+
+function updateBonus(){
+  bonusCashMessage = "+$" + (100 * numLevel);
+  bonusCash.innerText = bonusCashMessage;
+};
+
 
 function levelUpConfetti() {
   var congratulationsContainer = document.getElementById('confetti-container');
@@ -344,6 +352,7 @@ function levelUpConfetti() {
         function (callback) {
             return window.setTimeout(callback, 1000 / 60);
         };
+
     })();
 
 setTimeout (function endLevelUp() {
@@ -355,6 +364,7 @@ setTimeout (function hideLevelUp() {
   numLevel = numLevel + 1;
   updateLevel();
   resetScore();
+  updateBonus();
 }, 5000);
 
 };
