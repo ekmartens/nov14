@@ -111,7 +111,7 @@ body {
   width: 80%;
 }
 
-canvas {
+#progressTracker canvas {
   padding-left: 15%;
 }
 
@@ -119,10 +119,18 @@ canvas {
   text-align: center;
 }
 
-canvas {
+#progressTracker canvas {
   background: lightgray;
   font-family: 'Kaushan Script', cursive;
   height: auto;
+  width: 100%;
+}
+
+#confetti-container {
+  display: none;
+}
+
+#canvas {
   width: 100%;
 }
 
@@ -142,7 +150,7 @@ button {
     text-align: left;
   }
 
-  canvas {
+#progressTracker canvas {
     padding-left: 0;
   }
 
@@ -150,6 +158,37 @@ button {
     margin-left: 2%;
   }
 
+#progressTracker, .confetti {
+  float: left;
+}
+
+.confetti {
+      width: 70%;
+  }
+
+
+}
+
+/** Confetti **/
+#canvas canvas {
+  z-index: 1;
+  pointer-events: none;
+}
+
+#victoryText {
+  padding-top: 15%;
+  padding-left: 25%;
+  position: fixed;
+  z-index: -100;
+}
+
+.buttonContainer {
+  display: inline-block;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 20px;
 }
 
 
