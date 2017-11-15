@@ -7,9 +7,9 @@ ctx.strokeStyle="rgba(109, 109, 120, .5)";
 ctx.lineWidth=20;
 ctx.shadowBlur=10;
 ctx.shadowColor="white";
-ctx.arc(150,100,80,0,2*Math.PI);
-ctx.font="16px Kaushan Script";
-ctx.fillText("0%", 140, 105);
+ctx.arc(100,100,80,0,2*Math.PI);
+ctx.font="24px Kaushan Script";
+ctx.fillText("0%", 87, 107);
 ctx.stroke();
 
 function resetCanv() {
@@ -20,12 +20,20 @@ function resetCanv() {
   ctx.stroke();
 }
 
+function resetScore(){
+  resetCanv();
+  ctx.beginPath();
+  ctx.font="24px Kaushan Script";
+  ctx.fillText("0%", 87, 107);
+  ctx.stroke();
+}
+
 function oneFifth() {
   resetCanv();
   ctx.beginPath();
   ctx.strokeStyle="coral";
   ctx.arc(100,100,80,5,2*Math.PI);
-  ctx.fillText("20%", 85, 105);
+  ctx.fillText("20%", 76, 105);
   ctx.stroke();
 };
 
@@ -34,7 +42,7 @@ function twoFifth() {
   ctx.beginPath();
   ctx.strokeStyle="coral";
   ctx.arc(100,100,80,4,2*Math.PI);
-  ctx.fillText("40%", 85, 105);
+  ctx.fillText("40%", 75, 105);
   ctx.stroke();
 };
 
@@ -43,7 +51,7 @@ function threeFifth() {
   ctx.beginPath();
   ctx.strokeStyle="coral";
   ctx.arc(100,100,80,2,2*Math.PI);
-  ctx.fillText("60%", 85, 105);
+  ctx.fillText("60%", 75, 105);
   ctx.stroke();
 };
 
@@ -52,7 +60,7 @@ function fourFifth() {
   ctx.beginPath();
   ctx.strokeStyle="coral";
   ctx.arc(100,100,80,1,2*Math.PI);
-  ctx.fillText("80%", 85, 105);
+  ctx.fillText("80%", 75, 105);
   ctx.stroke();
 };
 
@@ -63,7 +71,7 @@ function fiveFifth() {
   ctx.shadowBlur=20;
   ctx.shadowColor="white";
   ctx.arc(100,100,80,0,2*Math.PI);
-  ctx.fillText("100%", 82, 105);
+  ctx.fillText("100%", 73, 105);
   ctx.stroke();
 };
 
@@ -72,12 +80,14 @@ var button2 = document.getElementById('secondMilestone');
 var button3 = document.getElementById('thirdMilestone');
 var button4 = document.getElementById('fourthMilestone');
 var button5 = document.getElementById('fifthMilestone');
+var resetButton = document.getElementById('reset');
 
 button1.addEventListener('click', oneFifth);
 button2.addEventListener('click', twoFifth);
 button3.addEventListener('click', threeFifth);
 button4.addEventListener('click', fourFifth);
 button5.addEventListener('click', fiveFifth);
+resetButton.addEventListener('click', resetScore);
 
 
 
