@@ -1,3 +1,4 @@
+/** Progress Bar **/
 
 var c = document.getElementById("progressBar");
 var ctx = c.getContext("2d");
@@ -89,11 +90,4 @@ button4.addEventListener('click', fourFifth);
 button5.addEventListener('click', fiveFifth);
 resetButton.addEventListener('click', resetScore);
 
-
-
-
-
-
-
-/**
-ctx.arc(200,100,50,0,2*Math.PI); **/
+/** End Progress Bar **/

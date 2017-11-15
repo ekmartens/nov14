@@ -97,8 +97,8 @@ textarea {
    Author's custom styles
    ========================================================================== */
 body {
-  background: lightblue;
-  color: #fff;
+  background: lightgray;
+  color: #000;
   font-family: 'Kaushan Script', cursive;
 }
 
@@ -106,12 +106,21 @@ body {
   padding:  5%;
 }
 
-.main-content {
-  width: 50%;
+#progressTracker {
+  margin-left: 10%;
+  width: 80%;
 }
 
 canvas {
-  background: lightblue;
+  padding-left: 15%;
+}
+
+#progressTracker h1 {
+  text-align: center;
+}
+
+canvas {
+  background: lightgray;
   font-family: 'Kaushan Script', cursive;
   height: auto;
   width: 100%;
@@ -123,8 +132,18 @@ button {
 
 @media all and (min-width: 768px) {
 
-  .main-content {
+  #progressTracker {
+    margin-left: 0;
     width: 20%;
+  }
+
+  #progressTracker h1 {
+    margin-left: 15%;
+    text-align: left;
+  }
+
+  canvas {
+    padding-left: 0;
   }
 
   .buttons {
