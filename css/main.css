@@ -96,9 +96,19 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.page-wrapper {
+  padding:  5%;
+}
 
+.main-content {
+  width: 20%;
+}
 
-
+canvas {
+  font-family: 'Kaushan Script', cursive;
+  height: auto;
+  width: 100%;
+}
 
 
 
