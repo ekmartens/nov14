@@ -7,6 +7,23 @@ levelDisplay = "Level " + numLevel;
 levelText.innerText = levelDisplay;
 }
 
+var dollars = document.getElementById('yourDollars');
+var numDollars = 0;
+var moneyDisplay;
+
+
+function updateMoney() {
+  numDollars = numDollars + 20;
+  moneyDisplay = "$ " + numDollars;
+  dollars.innerText = moneyDisplay;
+}
+
+function levelUpMoney() {
+  numDollars = numDollars + 100;
+  moneyDisplay = "$ " + numDollars;
+  dollars.innerText = moneyDisplay;
+}
+
 var c = document.getElementById("progressBar");
 var ctx = c.getContext("2d");
 
@@ -43,6 +60,7 @@ function oneFifth() {
   ctx.arc(100,100,80,5,2*Math.PI);
   ctx.fillText("$20", 76, 105);
   ctx.stroke();
+  updateMoney();
 };
 
 function twoFifth() {
@@ -52,6 +70,7 @@ function twoFifth() {
   ctx.arc(100,100,80,4,2*Math.PI);
   ctx.fillText("$40", 75, 105);
   ctx.stroke();
+  updateMoney();
 };
 
 function threeFifth() {
@@ -61,6 +80,7 @@ function threeFifth() {
   ctx.arc(100,100,80,2,2*Math.PI);
   ctx.fillText("$60", 75, 105);
   ctx.stroke();
+  updateMoney();
 };
 
 function fourFifth() {
@@ -70,6 +90,7 @@ function fourFifth() {
   ctx.arc(100,100,80,1,2*Math.PI);
   ctx.fillText("$80", 75, 105);
   ctx.stroke();
+  updateMoney();
 };
 
 function fiveFifth() {
@@ -82,6 +103,7 @@ function fiveFifth() {
   ctx.fillText("$100", 73, 105);
   ctx.stroke();
   levelUpConfetti();
+  levelUpMoney();
 };
 
 var button1 = document.getElementById('firstMilestone');

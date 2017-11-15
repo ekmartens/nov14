@@ -158,14 +158,17 @@ button {
     margin-left: 2%;
   }
 
-#progressTracker, .confetti {
+#progressTracker, .confetti, #money {
   float: left;
 }
 
-.confetti {
-      width: 70%;
-  }
+#money {
+  width: 30%;
+}
 
+.confetti {
+      width: 100%;
+  }
 
 }
 
@@ -176,9 +179,8 @@ button {
 }
 
 #victoryText {
-  padding-top: 15%;
-  padding-left: 25%;
   position: fixed;
+  padding-left: 10%;
   z-index: -100;
 }
 

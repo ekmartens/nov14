@@ -22,6 +22,7 @@
 
       <div class="page-wrapper">
         <div class="main-content">
+
           <section id="progressTracker">
             <h1 id="levelText">Level 1</h1>
             <canvas id="progressBar" height="200" style="border:1px solid   #d3d3d3;"></canvas>
@@ -35,12 +36,20 @@
             <button id="reset">Reset</button>
           </section>
 
-          <div id="confetti-container" class="confetti">
-            <div id="victoryText">
-              <h1>Level Up!</h1>
+          <div id="money">
+            <h1>$Cash$</h1>
+            <div id="confetti-container" class="confetti">
+              <div id="victoryText">
+                <h1>Level Up!</h1>
+                <h2>+$100</h2>
+              </div>
+              <canvas id="canvas"></canvas>
             </div>
-            <canvas id="canvas"></canvas>
+            <p id="yourDollars">$0</p>
+
+
           </div>
+
 
 
 
