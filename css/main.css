@@ -96,6 +96,10 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body {
+  background: lightblue;
+}
+
 .page-wrapper {
   padding:  5%;
 }
@@ -105,11 +109,15 @@ textarea {
 }
 
 canvas {
+  background: lightblue;
   font-family: 'Kaushan Script', cursive;
   height: auto;
   width: 100%;
 }
 
+button {
+  margin-top: 2%;
+}
 
 
 
