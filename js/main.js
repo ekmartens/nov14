@@ -574,12 +574,20 @@ function closeModal() {
 function setAvatar1() {
   characterPicked = true;
   avatar1.style.display = "block";
+  firstPick.style.boxShadow = "0px 0px 10px #000";
+  firstPick.style.background = "green";
+  secondPick.style.boxShadow = "none";
+  secondPick.style.background = "none";
   avatar2.style.display = "none";
 };
 
 function setAvatar2() {
   characterPicked = true;
   avatar2.style.display = "block";
+  secondPick.style.boxShadow = "0px 0px 10px #000";
+  secondPick.style.background = "green";
+  firstPick.style.boxShadow = "none";
+  firstPick.style.background = "none";
   avatar1.style.display = "none";
 };
 

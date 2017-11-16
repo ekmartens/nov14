@@ -98,8 +98,19 @@ textarea {
    ========================================================================== */
 body {
   background: lightgray;
-  color: #000;
+  color: #fff;
   font-family: 'Kaushan Script', cursive;
+  text-shadow: 1px 1px #000;
+}
+
+#gameName {
+  background: #05bcc1;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #000;
+  margin-left: 15%;
+  position: fixed;
+  text-align:center;
+  width: 70%;
 }
 
 .page-wrapper {
@@ -149,7 +160,10 @@ button {
 
 @media all and (min-width: 768px) {
 
-
+  #gameName {
+    margin-left: 20%;
+    width: 40%;
+  }
   #progressTracker {
     margin-left: 0;
     width: 20%;
@@ -177,6 +191,7 @@ button {
 }
 
 .confetti {
+      padding-left: 7%;
       width: 100%;
   }
 
