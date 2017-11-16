@@ -364,7 +364,22 @@ setTimeout (function endLevelUp() {
       badgeLevel2();
     } else if (numLevel === 3) {
       badgeLevel3();
+    } else if (numLevel === 4) {
+      badgeLevel4();
+    } else if (numLevel === 5){
+      badgeLevel5();
+    } else if (numLevel === 6){
+      badgeLevel6();
+    } else if (numLevel === 7){
+      badgeLevel7();
+    } else if (numLevel === 8){
+      badgeLevel8();
+    } else if (numLevel === 9){
+      badgeLevel9();
+    } else if (numLevel === 10){
+      badgeLevel10();
     }
+
 }, 3000);
 
 setTimeout (function hideLevelUp() {
@@ -429,4 +444,106 @@ var badgeLevel2 = function(){
     pic3ctx.beginPath();
     pic3ctx.fillText("3", 100, 100);
     pic3ctx.stroke();
+};
+
+var badgeLevel4 = function(){
+  var pic4=document.getElementById("rewardCanv4");
+  var pic4ctx=pic4.getContext("2d");
+  var img=document.getElementById("reward4");
+  pic4ctx.drawImage(img,10,10);
+  pic4ctx.font="60px Kaushan Script";
+  pic4ctx.beginPath();
+  pic4ctx.fillText("4", 100, 100);
+  pic4ctx.stroke();
+};
+
+var badgeLevel5 = function(){
+  var pic5=document.getElementById("rewardCanv5");
+  var pic5ctx=pic5.getContext("2d");
+  var img=document.getElementById("reward5");
+  pic5ctx.drawImage(img,10,10);
+  pic5ctx.font="60px Kaushan Script";
+  pic5ctx.beginPath();
+  pic5ctx.fillText("5", 100, 100);
+  pic5ctx.stroke();
+};
+
+var badgeLevel6 = function(){
+  var pic6=document.getElementById("rewardCanv6");
+  var pic6ctx=pic6.getContext("2d");
+  var img=document.getElementById("reward6");
+  pic6ctx.drawImage(img,10,10);
+  pic6ctx.font="60px Kaushan Script";
+  pic6ctx.beginPath();
+  pic6ctx.fillText("6", 100, 100);
+  pic6ctx.stroke();
+};
+
+var badgeLevel7 = function(){
+  var pic7=document.getElementById("rewardCanv7");
+  var pic7ctx=pic7.getContext("2d");
+  var img=document.getElementById("reward7");
+  pic7ctx.drawImage(img,10,10);
+  pic7ctx.font="60px Kaushan Script";
+  pic7ctx.beginPath();
+  pic7ctx.fillText("7", 100, 100);
+  pic7ctx.stroke();
+};
+
+var badgeLevel8 = function(){
+  var pic8=document.getElementById("rewardCanv8");
+  var pic8ctx=pic8.getContext("2d");
+  var img=document.getElementById("reward8");
+  pic8ctx.drawImage(img,10,10);
+  pic8ctx.font="60px Kaushan Script";
+  pic8ctx.beginPath();
+  pic8ctx.fillText("8", 100, 100);
+  pic8ctx.stroke();
+};
+
+var badgeLevel9 = function(){
+  var pic9=document.getElementById("rewardCanv9");
+  var pic9ctx=pic9.getContext("2d");
+  var img=document.getElementById("reward9");
+  pic9ctx.drawImage(img,10,10);
+  pic9ctx.font="60px Kaushan Script";
+  pic9ctx.beginPath();
+  pic9ctx.fillText("9", 100, 100);
+  pic9ctx.stroke();
+};
+
+var badgeLevel10 = function(){
+  var pic9=document.getElementById("rewardCanv9");
+  var pic9ctx=pic9.getContext("2d");
+  var img=document.getElementById("reward9");
+  pic9ctx.drawImage(img,10,10);
+  pic9ctx.font="60px Kaushan Script";
+  pic9ctx.beginPath();
+  pic9ctx.fillText("9", 100, 100);
+  pic9ctx.stroke();
+};
+
+var badgeLevel10 = function(){
+  var pic10=document.getElementById("rewardCanv10");
+  var pic10ctx=pic10.getContext("2d");
+  var img=document.getElementById("reward10");
+  pic10ctx.drawImage(img,10,10);
+  pic10ctx.font="60px Kaushan Script";
+  pic10ctx.beginPath();
+  pic10ctx.fillText("10", 85, 100);
+  pic10ctx.stroke();
+};
+
+
+function badgeTest(){
+  badgeLevel1();
+  badgeLevel2();
+  badgeLevel3();
+  badgeLevel4();
+  badgeLevel5();
+  badgeLevel6();
+  badgeLevel7();
+  badgeLevel8();
+  badgeLevel9();
+  badgeLevel10();
 };

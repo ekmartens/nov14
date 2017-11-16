@@ -140,6 +140,7 @@ button {
 
 @media all and (min-width: 768px) {
 
+
   #progressTracker {
     margin-left: 0;
     width: 20%;
@@ -196,11 +197,11 @@ button {
 /** Rewards **/
 
 
-#reward1, #reward2, #reward3, #reward {
+#reward1, #reward2, #reward3, #reward4, #reward5, #reward6, #reward7, #reward8, #reward9, #reward10, #reward {
   display: none;
 }
 
-#rewardCanv, #rewardCanv2, #rewardCanv3, #confettiRewardCanv {
+#rewardCanv, #rewardCanv2, #rewardCanv3, #rewardCanv4, #rewardCanv5, #rewardCanv6, #rewardCanv7, #rewardCanv8, #rewardCanv9, #rewardCanv10, #confettiRewardCanv {
   width: 100%;
 }
 
@@ -209,21 +210,38 @@ button {
   width: 20%;
 }
 
-#rewards {
-  float:right;
-  width: 30%;
+.badges {
+  width: 60%;
+  float:left;
 }
 
 #rewards h1 {
   text-align: center;
 }
 
+@media all and (min-width: 768px){
+  #rewards {
+    float:right;
+    width: 40%;
+  }
+}
 
 
+/** Character **/
 
+#character img {
+  margin-left: 10%;
+  padding-top: 5%;
+  width: 80%;
+}
 
+@media all and (min-width: 768px){
 
-
+  #character {
+    float:left;
+    width: 40%;
+  }
+}
 
 
 
