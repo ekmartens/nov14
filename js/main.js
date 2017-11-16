@@ -548,31 +548,54 @@ function badgeTest(){
   badgeLevel10();
 };
 
-
 /** Character Picker **/
 
-// Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
+var modal = document.getElementById('characterModal');
 var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
+function showModal() {
     modal.style.display = "block";
-}
+};
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
+var firstPick = document.getElementById('character1');
+var secondPick = document.getElementById('character2');
+var avatar1 = document.getElementById('avatar');
+var avatar2 = document.getElementById('avatar2');
+var characterPicked = false;
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+function closeModal() {
+  modal.style.display = "none";
+};
+
+function setAvatar1() {
+  characterPicked = true;
+  avatar1.style.display = "block";
+  avatar2.style.display = "none";
+};
+
+function setAvatar2() {
+  characterPicked = true;
+  avatar2.style.display = "block";
+  avatar1.style.display = "none";
+};
+
+firstPick.addEventListener('click', setAvatar1);
+secondPick.addEventListener('click', setAvatar2);
+
+$(function(){
+    $("#my-form").submit(function(e) { // change # to .
+        var value = $("#input_name").val(); // you should have #input_name
+
+        $('#yourName').text(value); // text function takes value as parameter
+        e.preventDefault();
+        if ( characterPicked == false){
+          alert("Please choose a character.");
+        } else {
+          closeModal();
+        }
+
+    });
+});
+
+submitBtn.addEventListener('click', setPlayerName);

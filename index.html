@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
-    <body>
+    <body onload="showModal()">
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -23,11 +23,8 @@
       <div class="page-wrapper">
         <div class="main-content">
 
-          <!-- Trigger/Open The Modal -->
-        <button id="myBtn">Open Modal</button>
-
         <!-- Character Modal -->
-        <div id="myModal" class="modal">
+        <div id="characterModal" class="modal">
 
           <!-- Character Modal content -->
           <div class="modal-content">
@@ -37,7 +34,10 @@
               <img src="img/character-dress-01.png" class="character-select" id="character1" />
               <img src="img/character-pants-02.png" class="character-select" id="character2" />
               <h1>Enter Your Name</h1>
-              <input id="playerName"></input>
+              <form id="my-form">
+                <input type="text" id="input_name" size="10" maxlength="10" />
+                <input type="submit" id="submit" value="submit" />
+              </form>
             </div>
           </div>
 

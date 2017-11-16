@@ -235,6 +235,10 @@ button {
   width: 80%;
 }
 
+#avatar, #avatar2 {
+  display: none;
+}
+
 @media all and (min-width: 768px){
 
   #character {
