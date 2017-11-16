@@ -384,11 +384,14 @@ setTimeout (function endLevelUp() {
 
 setTimeout (function hideLevelUp() {
   congratulationsContainer.style.display = "none";
+  if (numLevel < 10){
   numLevel = numLevel + 1;
   updateLevel();
   resetScore();
   updateBonus();
-
+} else if (numLevel >= 10){
+  alert("You Win!");
+}
 }, 5000);
 
 };
