@@ -5,6 +5,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title></title>
         <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,7 +22,7 @@
         <!-- Add your site or application content here -->
 
       <header>
-        <h1 id="gameName">Name of Game</h1>
+        <h1 id="gameName">Pub Trivia</h1>
       </header>
       <div class="page-wrapper">
         <div class="main-content">
@@ -37,7 +38,7 @@
               <img src="img/character-pants-02.png" class="character-select" id="character2" />
               <h1>Enter Your Name</h1>
               <form id="my-form">
-                <input type="text" id="input_name" />
+                <input type="text" placeholder="Your Name" id="input_name" />
                 <input type="submit" id="submit" value="submit" />
               </form>
             </div>
@@ -48,7 +49,7 @@
             <section id="progressTracker">
 
               <canvas id="progressBar" height="200" style="border:1px solid   #d3d3d3;"></canvas>
-              <h1 id="levelText">Level 1</h1>
+              <h1 id="levelText">Round 1</h1>
               <div class="buttons">
                 <button id="firstMilestone">1</button>
                 <button id="secondMilestone">2</button>
@@ -83,7 +84,7 @@
               <img src="img/character-pants-02.png" id="avatar2" />
             </section>
             <div class="badges">
-              <h1>Level Badges</h1>
+              <h1>Badges</h1>
               <div class="rewardContainer">
                 <img id="reward1" src="img/trophy-small.png" />
                 <canvas id="rewardCanv" height="240"></canvas>
@@ -138,6 +139,15 @@
             </div>
           </section>
 
+          <section id="quizQuestion">
+            <h1>Title of Question</h1>
+            <p>This is where the question goes.</p>
+            <form id="questionForm">
+              <input type="text" placeholder="Your Answer" id="input_answer" />
+            </form>
+              <button id="submitAnswer">Submit</button>
+            <button id="buyHint" class="buyBtn">Buy a Drink</button><button id="buyAnswer" class="buyBtn">Buy Answer</button>
+          </section>
 
 
         </div>

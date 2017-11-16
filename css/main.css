@@ -122,6 +122,10 @@ body {
     width: 50%;
 }
 
+input {
+  padding: 1%;
+}
+
 #my-form {
   padding-bottom: 5%;
 }
@@ -156,6 +160,33 @@ body {
 
 button {
   margin-top: 2%;
+}
+
+#quizQuestion {
+  /**clear: both;**/
+  overflow: auto;
+  width: 100%;
+}
+
+#quizQuestion h1, #quizQuestion p {
+  text-align:center;
+}
+
+#quizQuestion p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#questionForm {
+  margin-left: 25%;
+  width: 50%;
+}
+
+#questionForm #input_answer {
+  width: 80%;
+}
+
+.buttons, #reset {
+  display: none;
 }
 
 @media all and (min-width: 768px) {
@@ -193,6 +224,15 @@ button {
 .confetti {
       padding-left: 7%;
       width: 100%;
+  }
+}
+
+  @media all and (min-width: 1200px){
+
+  #quizQuestion {
+    margin-top: 12%;
+    position: fixed;
+    width: 70%;
   }
 
 }

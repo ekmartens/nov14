@@ -3,7 +3,7 @@ var levelText = document.getElementById('levelText');
 var numLevel = 1;
 
 function updateLevel() {
-  levelDisplay = "Level " + numLevel;
+  levelDisplay = "Round " + numLevel;
   levelText.innerText = levelDisplay;
 }
 
@@ -106,6 +106,7 @@ function fiveFifth() {
   levelUpMoney();
 };
 
+/*
 var button1 = document.getElementById('firstMilestone');
 var button2 = document.getElementById('secondMilestone');
 var button3 = document.getElementById('thirdMilestone');
@@ -119,6 +120,7 @@ button3.addEventListener('click', threeFifth);
 button4.addEventListener('click', fourFifth);
 button5.addEventListener('click', fiveFifth);
 resetButton.addEventListener('click', resetScore);
+**/
 
 /** End Progress Bar **/
 
@@ -395,6 +397,39 @@ setTimeout (function hideLevelUp() {
 }, 5000);
 
 };
+
+/** Submit Answer **/
+
+var submitAnswer = document.getElementById('submitAnswer');
+var numQuestion = 1;
+var updateQuestion = function(){
+  if (numQuestion < 5){
+    numQuestion = numQuestion + 1;
+  } else {
+    numQuestion = 1;
+  }
+}
+
+function giveAnswer(){
+  if (numQuestion === 1){
+    oneFifth();
+    updateQuestion();
+  } else if (numQuestion === 2){
+    twoFifth();
+    updateQuestion();
+  } else if (numQuestion === 3){
+    threeFifth();
+    updateQuestion();
+  } else if (numQuestion === 4){
+    fourFifth();
+    updateQuestion();
+  } else if (numQuestion === 5){
+    fiveFifth();
+    updateQuestion();
+  }
+};
+
+submitAnswer.addEventListener('click', giveAnswer);
 
 
 /** Function
