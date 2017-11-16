@@ -23,6 +23,26 @@
       <div class="page-wrapper">
         <div class="main-content">
 
+          <!-- Trigger/Open The Modal -->
+        <button id="myBtn">Open Modal</button>
+
+        <!-- Character Modal -->
+        <div id="myModal" class="modal">
+
+          <!-- Character Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="pickCharacter">
+              <h1>Pick A Character</h1>
+              <img src="img/character-dress-01.png" class="character-select" id="character1" />
+              <img src="img/character-pants-02.png" class="character-select" id="character2" />
+              <h1>Enter Your Name</h1>
+              <input id="playerName"></input>
+            </div>
+          </div>
+
+        </div>
+
             <section id="progressTracker">
 
               <canvas id="progressBar" height="200" style="border:1px solid   #d3d3d3;"></canvas>
@@ -50,6 +70,7 @@
 
               <canvas id="canvas"></canvas>
             </div>
+            <h1 id="yourName">Your Name</h1>
             <h1 id="yourDollars">$0</h1>
           </div>
         </div>
@@ -57,6 +78,7 @@
           <section id="rewards">
             <section id="character">
               <img src="img/character-dress-01.png" id="avatar" />
+              <img src="img/character-pants-02.png" id="avatar2" />
             </section>
             <div class="badges">
               <h1>Level Badges</h1>
