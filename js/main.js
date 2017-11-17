@@ -410,7 +410,7 @@ var updateQuestion = function(){
   }
 }
 
-function giveAnswer(){
+function triggerAnswer(){
   if (numQuestion === 1){
     oneFifth();
     updateQuestion();
@@ -428,6 +428,15 @@ function giveAnswer(){
     updateQuestion();
   }
 };
+
+var correctAnswer = false;
+
+function giveAnswer(){
+
+  if ( correctAnswer === true ) {
+    triggerAnswer();
+  }
+}
 
 submitAnswer.addEventListener('click', giveAnswer);
 
