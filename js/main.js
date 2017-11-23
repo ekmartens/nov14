@@ -430,6 +430,7 @@ function triggerAnswer(){
 };
 
 var correctAnswer = false;
+var theAnswer = document.getElementById('')
 
 function giveAnswer(){
 
@@ -439,18 +440,6 @@ function giveAnswer(){
 }
 
 submitAnswer.addEventListener('click', giveAnswer);
-
-
-/** Function
-
-When a happens trigger oneFifth
-When b happens trigger twoFifth
-etc.
-
-when f happens trigger end level + reward
-resetScore();
-
-**/
 
 /** Load Reward Canvas**/
 var confettiBadge = function() {
@@ -595,7 +584,9 @@ function badgeTest(){
   badgeLevel10();
 };
 
+
 /** Character Picker **/
+
 
 var modal = document.getElementById('characterModal');
 var btn = document.getElementById("myBtn");

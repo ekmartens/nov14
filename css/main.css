@@ -168,11 +168,43 @@ button {
   width: 100%;
 }
 
+#submitAnswer {
+  clear: both;
+  margin-left: 25%;
+  width: 50%;
+}
+
+#buyButtons {
+  margin-left: 38%;
+  padding-bottom: 5%;
+  width: 50%;
+}
+
+.buyBtn {
+  background: coral;
+  border-radius: 50%;
+  box-shadow: 0px 3px 0px #ff3300;
+  color: #fff;
+  font-family: 'Kaushan Script', cursive;
+  height: 100px;
+  margin-bottom: 2%;
+  text-shadow: 1px 1px #000;
+  width: 100px;
+}
+
+.buyBtn:hover {
+  box-shadow: 2px 2px 10px #000;
+}
+
 #quizQuestion h1, #quizQuestion p {
   text-align:center;
 }
 
 #quizQuestion p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#questionForm {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -231,7 +263,6 @@ button {
 
   #quizQuestion {
     margin-top: 12%;
-    position: fixed;
     width: 70%;
   }
 
@@ -411,7 +442,11 @@ button {
     to {top: 0; opacity: 1}
 }
 
-
+footer {
+  clear: both;
+  overflow: auto;
+  width: 100%;
+}
 
 /* ==========================================================================
    Helper classes
